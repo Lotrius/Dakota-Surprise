@@ -42,9 +42,10 @@ void loadBar() {
     printf("\rLoading: [%s] | %3d%%\0",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE);
     fflush(stdout); // Need to do this so that it actually prints out during the iterations, instead of just waiting until everything ends to print out the finished product
 
-    int sleepTime = rand() % 250001; // Choose a random number between 0 and 0.25 seconds. Apparently doing it this way with just the modulo creates some skew towards certain numbers, but I really don't care
+    int sleepTime = rand() % 500001; // Choose a random number between 0 and 0.25 seconds. Apparently doing it this way with just the modulo creates some skew towards certain numbers, but I really don't care
     usleep(sleepTime); // Sleep for sleepTime seconds
   }
+  usleep(1000000);
 
   putchar('\n'); // Newline to not mess up how everything looks
 }
@@ -64,7 +65,8 @@ void openPage() {
 
 int main() {
   loadBar(); // Display download bar
-  printf("Download complete.\n");
+  printf("Loading complete.\n");
+  usleep(1000000);
   openPage(); // Countdown to surprise
   return 0;
 }
