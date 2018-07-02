@@ -26,14 +26,26 @@ void loadBar() {
     printf("\rLoading: [%s] | %3d%%\0",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE);
     fflush(stdout);
 
-    int sleepTime = rand() % 1000000;
+    int sleepTime = rand() % 250000;
     usleep(sleepTime);
   }
   putchar('\n');
 }
 
+void openPage() {
+  for(int i = 5; i >= 0; i--) {
+    printf("\rOpening surprise in %d", i);
+    fflush(stdout);
+    usleep(1000000);
+  }
+  putchar('n');
+
+  system("explorer https://htmlpreview.github.io/?https://github.com/Somesk278/Dakota-Birthday/blob/master/HTML%20Surprise/index.html");
+}
+
 int main() {
   loadBar();
-  printf("Please go to goo.gl/sJQwsV\n");
+  printf("Download complete.\n");
+  openPage();
   return 0;
 }
