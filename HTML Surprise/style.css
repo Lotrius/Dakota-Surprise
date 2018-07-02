@@ -3,3 +3,7 @@ h1 {
   font-family: 'Wendy One', sans-serif;
   color: pink;
 }
+
+#instructions {
+  text-align: center;
+}

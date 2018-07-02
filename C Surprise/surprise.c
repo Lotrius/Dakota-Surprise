@@ -13,7 +13,7 @@ void loadBar() {
   loadingBar[LOADING_BAR_SIZE] = '\0';
 
   srand(time(0));
-  
+
   int numA =  rand() % (40 - 11) + 10;
 
   for(int i = 0; i < LOADING_BAR_SIZE; i++) {
@@ -34,6 +34,6 @@ void loadBar() {
 
 int main() {
   loadBar();
-  printf("Please go to \n");
+  printf("Please go to goo.gl/sJQwsV\n");
   return 0;
 }
