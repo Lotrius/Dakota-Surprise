@@ -23,8 +23,8 @@ void loadBar() {
     }
 
     printf("\rLoading: [%s] | %3d%%\0",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE);
-
     fflush(stdout);
+    
     int sleepTime = rand() % 1000000;
     usleep(sleepTime);
   }
