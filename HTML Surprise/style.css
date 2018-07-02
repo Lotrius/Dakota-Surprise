@@ -4,6 +4,7 @@ body {
 
 #message {
   text-align: center;
+  font-size: 1em;
   font-family: 'Wendy One', sans-serif;
   color: pink;
   text-shadow: 0 0 5px #000000;
@@ -11,6 +12,7 @@ body {
 
 .instructions {
   text-align: center;
+  font-size: 0.6em;
   font-family: 'Anton', sans-serif;
   color: red;
   text-shadow: 0 0 10px #000000;
