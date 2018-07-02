@@ -13,6 +13,7 @@ void loadBar() {
   loadingBar[LOADING_BAR_SIZE] = '\0';
 
   srand(time(0));
+  
   int numA =  rand() % (40 - 11) + 10;
 
   for(int i = 0; i < LOADING_BAR_SIZE; i++) {
@@ -24,7 +25,7 @@ void loadBar() {
 
     printf("\rLoading: [%s] | %3d%%\0",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE);
     fflush(stdout);
-    
+
     int sleepTime = rand() % 1000000;
     usleep(sleepTime);
   }
