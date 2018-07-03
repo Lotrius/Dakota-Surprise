@@ -68,5 +68,6 @@ int main() {
   printf("Loading complete.\n");
   usleep(1000000);
   openPage(); // Countdown to surprise
+  
   return 0;
 }

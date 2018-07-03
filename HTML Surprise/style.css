@@ -10,8 +10,11 @@ body {
   text-shadow: 0 0 5px #000000;
 }
 
-.instructions {
+.main {
   text-align: center;
+}
+
+.instructions {
   font-size: 0.6em;
   font-family: 'Anton', sans-serif;
   color: red;
@@ -20,4 +23,8 @@ body {
 
 a:visited {
   color: green;
+}
+
+.button {
+  margin: 20px;
 }
