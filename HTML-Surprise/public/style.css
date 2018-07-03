@@ -1,0 +1,30 @@
+body {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+#message {
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Wendy One', sans-serif;
+  color: pink;
+  text-shadow: 0 0 5px black;
+}
+
+.main {
+  text-align: center;
+}
+
+.instructions {
+  font-size: 0.6em;
+  font-family: 'Anton', sans-serif;
+  color: #ffe5b4;
+  text-shadow: 0 0 15px black;
+}
+
+a:visited {
+  color: green;
+}
+
+.button {
+  margin: 20px;
+}
