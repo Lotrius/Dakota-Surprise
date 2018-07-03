@@ -27,7 +27,7 @@ void loadBar() {
     }
 
 
-    printf("\rLoading: [%s] | %3d%%\0",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE); // Print loading bar
+    printf("\rLoading: [%s] | %3d%%",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE); // Print loading bar
     fflush(stdout); // Need to do this so that it actually prints out during the iterations, instead of just waiting until everything ends to print out the finished product
 
     int sleepTime = rand() % 500001; // Choose a random number between 0 and 0.25 seconds. Apparently doing it this way with just the modulo creates some skew towards certain numbers, but I really don't care
@@ -48,10 +48,11 @@ void openPage() {
 
   putchar('\n'); // We love newlines
 
-  system("explorer https://dakota-surprise.firebaseapp.com/"); // Open surprise
+  system("xdg-open https://dakota-surprise.firebaseapp.com/");
 }
 
 int main() {
+
   loadBar(); // Display download bar
   printf("Loading complete.\n");
   usleep(1000000);
