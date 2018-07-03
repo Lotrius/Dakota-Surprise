@@ -6,8 +6,8 @@ const addPic = () => {
     const img = document.createElement("img");
     img.src = "https://rlv.zcache.com/you_dont_look_an_ocelot_older_birthday_card-r33063ba37aab4f7bb091562a241c65ae_xvuat_8byvr_540.jpg";
     img.alt = "Happy birthday ocelot";
-    img.height = 150;
-    img.width = 150;
+    img.height = 300;
+    img.width = 300;
 
     pic[0].appendChild(img);
   }
