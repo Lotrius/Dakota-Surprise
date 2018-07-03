@@ -26,20 +26,8 @@ void loadBar() {
       loadingBar[i] = 'h';
     }
 
-    /*
-      Print out entire loadingBar, then on another iteration, carriage return (\r), and reprint/overwrite previous bar with updated loadingBar array
-      In other words, in first iteration, the bar is:
-      Loading: [a           ] |    1%[cursor]
 
-      Then, on the next iteration, the cursor is moved back to the front of the  line:
-      [cursor]Loading: [a           ] |    1%
-
-      The whole line is then overwritten with the new loadingBar array data so it looks like this:
-      Loading: [aa          ] |    3%[cursor]
-
-      This repeats till it's all the whole thing is iterated through
-    */
-    printf("\rLoading: [%s] | %3d%%\0",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE);
+    printf("\rLoading: [%s] | %3d%%\0",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE); // Print loading bar
     fflush(stdout); // Need to do this so that it actually prints out during the iterations, instead of just waiting until everything ends to print out the finished product
 
     int sleepTime = rand() % 500001; // Choose a random number between 0 and 0.25 seconds. Apparently doing it this way with just the modulo creates some skew towards certain numbers, but I really don't care
@@ -60,7 +48,7 @@ void openPage() {
 
   putchar('\n'); // We love newlines
 
-  system("explorer https://htmlpreview.github.io/?https://github.com/Somesk278/Dakota-Birthday/blob/master/HTML%20Surprise/index.html"); // Open surprise
+  system("explorer https://dakota-surprise.firebaseapp.com/"); // Open surprise
 }
 
 int main() {
@@ -68,6 +56,6 @@ int main() {
   printf("Loading complete.\n");
   usleep(1000000);
   openPage(); // Countdown to surprise
-  
+
   return 0;
 }
