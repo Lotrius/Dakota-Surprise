@@ -6,7 +6,7 @@
 
 void loadBar() {
 
-  const int LOADING_ARRAY = 61; // Size of the array that represents the loading bar. The extra 1 is for the null terminating character
+  const int LOADING_ARRAY = 51; // Size of the array that represents the loading bar. The extra 1 is for the null terminating character
   const int LOADING_BAR_SIZE = LOADING_ARRAY - 1; // The size of the actual loading bar
 
   char loadingBar[LOADING_ARRAY];  // Create the character array
@@ -15,7 +15,7 @@ void loadBar() {
 
   srand(time(0)); // Set up to be able to generate random numbers
 
-  int numA =  rand() % (40 - 19) + 20; // Random number between 20 and 40 representing number of a's in loading bar
+  int numA =  rand() % (30 - 19) + 20; // Random number between 20 and 30 representing number of a's in loading bar
 
   // Iterate through loading bar
   for(int i = 0; i < LOADING_BAR_SIZE; i++) {
@@ -27,7 +27,7 @@ void loadBar() {
     }
 
 
-    printf("\rLoading: [%s] | %3d%%",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE); // Print loading bar
+    printf("\rLoading surprise: [%s] | %3d%%",loadingBar, ((i+1)*100) / LOADING_BAR_SIZE); // Print loading bar
     fflush(stdout); // Need to do this so that it actually prints out during the iterations, instead of just waiting until everything ends to print out the finished product
 
     int sleepTime = rand() % 500001; // Choose a random number between 0 and 0.25 seconds. Apparently doing it this way with just the modulo creates some skew towards certain numbers, but I really don't care
