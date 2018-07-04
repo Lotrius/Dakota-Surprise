@@ -15,7 +15,7 @@ void loadBar() {
 
   srand(time(0)); // Set up to be able to generate random numbers
 
-  int numA =  rand() % (30 - 19) + 20; // Random number between 20 and 30 representing number of a's in loading bar
+  int numA =  rand() % (25 - 19) + 20; // Random number between 20 and 30 representing number of a's in loading bar
 
   // Iterate through loading bar
   for(int i = 0; i < LOADING_BAR_SIZE; i++) {
